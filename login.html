@@ -8,6 +8,7 @@
 		   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
 		   <script type="text/javascript" src="JScript/login.js"></script>
 		   <script type="text/javascript" src="JScript/fb.js"></script>
+		   <script src="http://connect.facebook.net/en_US/all.js"></script>
 		<style>
 			.spacer{margin-top: 150px;}
 			.space{margin-top: 5px; font-family: verdana;}
@@ -74,10 +75,35 @@
 			Logs:<br/>
 		</div>
 		
-		<div id="fb-root"></div>
-			<a href='#' onclick="FacebookInviteFriends();"> 
-				Facebook Invite Friends Link
-			</a>
-		
+		<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+FB.init({
+appId:'289427904574934',
+cookie:true,
+status:true,
+xfbml:true
+});
+
+function FacebookInviteFriends()
+{
+FB.ui({
+method: 'apprequests',
+message: 'Your Message diaolog'
+});
+}
+</script>
+
+
+
+<div id="fb-root"></div>
+<a href='#' onclick="FacebookInviteFriends();"> 
+Facebook Invite Friends Link
+</a>
+		<script type='text/javascript'>
+if (top.location!= self.location)
+{
+top.location = self.location
+}
+</script>
 	</body>
 </html>
