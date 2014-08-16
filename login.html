@@ -87,11 +87,11 @@ xfbml:true
 function FacebookInviteFriends()
 {
 FB.ui({
-method: 'apprequests',
+method: 'get',
 display: 'iframe',
 data: 'Breakkapp',
 message: 'Your Message diaolog'
-});
+}, inviteCallback);
 }
 </script>
 
