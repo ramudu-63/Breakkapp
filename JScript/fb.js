@@ -71,13 +71,13 @@ window.fbAsyncInit = function() {
 //  			}
 //  		});
 //  		
- 	//	function FacebookInviteFriends()
-  	//	{
-  	//	FB.ui({
-  	//	method: 'apprequests',
-  	//	message: 'Your Message diaolog'
-  	//	});
-  	//	}
+ 		function FacebookInviteFriends()
+  		{
+  		FB.ui({
+  		method: 'apprequests',
+  		message: 'Your Message diaolog'
+  		});
+  		}
   	
   
 	function getPhoto()
