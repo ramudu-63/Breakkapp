@@ -6,7 +6,8 @@
      <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="bootstrap/css/sticky-footer-navbar.css" rel="stylesheet">
- <script type="text/javascript" src="JScript/NewBreakk.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+ <script src="JScript/login.js"></script>
  <style>
     body{
         font-family: verdana;
@@ -45,7 +46,7 @@
                 <li><a href="#">privacy</a></li>
                 <li><a href="changePassword.html">Change Password</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
 <!--                <li class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
                 <li><a href="#">Separated link</a></li>
@@ -68,6 +69,7 @@
                         <h3 style="font-family: verdana;color:#1fbdbe;font-weight: 400;font-size: 24px">Add New Breakk </h3>
                         <font class="" style="color: #b92c28"> * denotes are required</font>
                     </div>
+                    <div id="newBreakk"></div>
                 </div>
                 <br>
 <!--                 <form class="form-horizontal" method="post" action=""> -->
@@ -149,7 +151,7 @@
                         
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button class="btn btn-primary" type="submit" onclick="newBreakk()">Add Breakk</button>
+                            <button class="btn btn-primary" type="submit" onclick="newBreakk();">Add Breakk</button>
                             <button class="btn btn-primary" type="reset">Reset</button>
                             
                            
@@ -172,6 +174,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/addjs/jquery-1.7.1.min.js"></script>
-    <script src="bootstrap/addjs/bootstrap.min.js"></script>         
+    <script src="bootstrap/addjs/bootstrap.min.js"></script>     
+     
     </body>
 </html>

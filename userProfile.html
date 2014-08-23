@@ -6,7 +6,10 @@
          <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="bootstrap/css/sticky-footer-navbar.css" rel="stylesheet">
- <script type="text/javascript" src="JScript/register.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+ <script type="text/javascript" src="JScript/userProfile.js"></script>
+  <script type="text/javascript" src="JScript/login.js"></script>
+ 
  <style>
     body{
         font-family: verdana;
@@ -14,7 +17,7 @@
     }
 </style>
     </head>
-    <body>
+    <body onload="profile()">
           <div class="navbar navbar-default navbar-static-top" role="navigation" style="font-family: verdana;color:#1fbdbe;background-color: #FFFFFF;">
       <div class="container">
         <div class="navbar-header">
@@ -61,7 +64,7 @@
         <div class="container">
             <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-2"> Welcome UserName</div>
+            <div class="col-md-2" id="UserName"></div>
             <div class="col-md-2"> 
                 <img src="bb.png" class="img-responsive img-rounded">
             </div>
@@ -76,14 +79,14 @@
                     <table class="table table-bordered">
                         <tr>
                             <td rowspan="3">
-                        User Name <br/>
-                                League Name<br/>
-                                payment sent 
+                       			<div id="userName"></div> <br/>
+                                <div id="eventName"></div><br/>
+                                <div id="paymentSent">payment sent</div> 
                             </td>
                             <td rowspan="3">
-                            $50 <br/>
-                                owes $40 <br/>
-                                07/08/2014
+                            	<div id="dues"></div> <br/>
+                                <div>owes $40</div> <br/>
+                                <div>07/08/2014</div>
                             </td>
                         </tr>
                     

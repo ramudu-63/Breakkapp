@@ -11,7 +11,7 @@ function signUp(){
 //			var msg = '{"message": "success"}';
 //			var obj = JSON.parse(msg);
 //			alert(obj.message);
-//		} 
+//		}   
 //	});
 	
 	var username = document.getElementById("uName").value;
