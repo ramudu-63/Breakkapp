@@ -1,12 +1,11 @@
 Parse.initialize("Ate3XnDhVzpCddAdwVmtRBA4RkChKCfyaonAPTXk", "McH7sew1AmKVl8nmvHUVX3YkN5mxT3pZhxczQheH");
-var breakkEvent;
+
+
 function profile()
 {
-	alert("hi");
-	
 	var currentuser = Parse.User.current();
 	var user = currentuser.get("username");
-	alert(user);
+	
 	document.getElementById("UserName").innerHTML = "Welcome "+ user;
 	
 	var breakkDetails = Parse.Object.extend("NewBreakDetails");
@@ -15,27 +14,24 @@ function profile()
 	
 	query.find({
 		success: function(query){
+					
+		for(var i=0;i<query.length;i++){
+
 			
-			for(var i=0;i<query.length;i++){
-				
-			breakkEvent = {i:[{"breakCreatedBy":query[i].get("BreakCreatedBy"),
-							"breakName":query[i].get("BreakName"),
-							"BreakDues":query[i].get("BreakDues")}
-							]};
-				
-				
+		var tab="<table class='table table-bordered'><tr><td rowspan='3'><div id='userName'>"+query[i].get('BreakCreatedBy')+"</div> <br/><div id='eventName'>"+query[i].get('BreakName')+"</div><br/><div id='paymentSent'>payment sent</div> </td><td rowspan='3'><div id='dues'>$"+query[i].get('BreakDues')+"</div> <br/><div>owes $40</div> <br/><div>07/08/2014</div></td></tr> </table>";
 			
-				document.getElementById("userName").innerHTML = query[i].get("BreakCreatedBy");
-				document.getElementById("eventName").innerHTML = query[i].get("BreakName");
-				document.getElementById("dues").innerHTML = "$"+query[i].get("BreakDues");alert(query[i].id);
-			}
-			//var obj = JSON.parse(breakkEvent);
-			alert(breakkEvent);
+			$("#table").append(tab);
+
+		}
+			
+			
 		},
 		error: function(error){
 			alert("profile error");
 		}
 	});
+	
+	
 	
 };
 
