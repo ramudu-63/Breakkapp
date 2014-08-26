@@ -31,7 +31,7 @@ window.fbAsyncInit = function() {
 	
     };
     
-   	function Login()
+   	function FBLogin()
 	{
 	
 		FB.login(function(response) {
