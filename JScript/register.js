@@ -35,14 +35,3 @@ function signUp(){
 	});
 }
 
-function logout(){
-	//Parse.initialize("Ate3XnDhVzpCddAdwVmtRBA4RkChKCfyaonAPTXk", "McH7sew1AmKVl8nmvHUVX3YkN5mxT3pZhxczQheH");
-	alert("hi1");
-	
-	
-		//Parse.User.logOut();alert("hi");
-		window.location.href = "index.html";
-	
-	
-		
-}

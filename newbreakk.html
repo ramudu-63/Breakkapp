@@ -8,15 +8,24 @@
 <link href="bootstrap/css/sticky-footer-navbar.css" rel="stylesheet">
 <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
  <script src="JScript/login.js"></script>
+ <script src="JScript/inviteUsers.js"></script>
  <style>
     body{
         font-family: verdana;
         background-color: #f8f8f8;
     }
+    .btn1{
+    	background-color: #EF6619;
+    	border-color: #EF6619;
+    	color: #FFFFFF;
+    }
+    .labl{
+    	color: #EF6619;
+    }
 </style>
     </head>
     <body>
-          <div class="navbar navbar-default navbar-static-top" role="navigation" style="font-family: verdana;color:#1fbdbe;background-color: #FFFFFF;">
+          <div class="navbar navbar-default navbar-static-top" role="navigation" style="font-family: verdana;color:#1fbdbe;background-color: #66BEE0;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,14 +36,14 @@
           </button>
             <a class="navbar-brand" href="index.html">
           <i class="glyphicon glyphicon-leaf" style="color:orange;"></i>
-                                <font style="font-family: verdana;color:#1fbdbe;font-weight: 400;font-size: 24px"> Breakk </font>
+                                <font style="font-family: verdana;color:white;font-weight: 400;font-size: 24px"> Breakk </font>
           </a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <!--<li ><a href="login.html">Login</a></li>-->
-            <li><a href="userProfile.html">Profile</a></li>
-            <li class="active"><a href="newbreakk.html">New Breakk</a></li>
+            <li><a href="userProfile.html" style="color:white">Profile</a></li>
+            <li class="active"><a href="newbreakk.html" style="background-color: #66BEE0;color:white">New Breakk</a></li>
 <!--             <li><a href="managebreakk.html">Manage Breakk</a></li> -->
 
           </ul>
@@ -66,7 +75,7 @@
                     
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <h3 style="font-family: verdana;color:#1fbdbe;font-weight: 400;font-size: 24px">Add New Breakk </h3>
+                        <h3 style="font-family: verdana;color:#1C9FD2;font-weight: 400;font-size: 24px">Add New Breakk </h3>
                         <font class="" style="color: #b92c28"> * denotes are required</font>
                     </div>
                     <div id="newBreakk"></div>
@@ -120,7 +129,7 @@
                 <div class="row" style="margin-top: 1%">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <a href="#" class="form-control" style="background-color: #E9E4C8">Invite Participants </a>
+                        <a href="#" class="form-control" style="background-color: #E9E4C8" onclick="invite()" data-toggle="modal" data-target="#myModal">Invite Participants </a>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 1%">
@@ -151,8 +160,8 @@
                         
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button class="btn btn-primary" type="submit" onclick="newBreakk();">Add Breakk</button>
-                            <button class="btn btn-primary" type="reset">Reset</button>
+                            <button class="btn btn-primary btn1" type="submit" onclick="newBreakk();">Add Breakk</button>
+                            <button class="btn btn-primary btn1" type="reset">Reset</button>
                             
                            
                         </div>
@@ -163,13 +172,43 @@
             </div>
         </section>
         <br/>
-	<div class="footer"  style="background-color: #bce8f1;">
+	<div class="footer"  style="background-color: #66BEE0;">
       <div class="container">
         <p class="text-muted" align="center">Copyrights @2014</p>
       </div>
     </div>
-
-
+	<!-- model popup -->
+	<div id="myModal" class="modal fade">
+	    <div class="modal-dialog">
+    	    <div class="modal-content">
+        	    <div class="modal-header">
+            	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                	<h4 class="modal-title labl">New Breakk</h4>
+            	</div>
+            	<div class="modal-body">
+                	<p id="users"></p>
+                	
+            	</div>
+            	<div class="modal-footer">
+	                <button type="button" id="cancel" class="btn btn-default" data-dismiss="modal">Close</button>
+    	            <button type="button" class="btn btn-primary" onclick="invitation()">Invite</button>
+        	    </div>
+        	</div>
+    	</div>
+	</div>
+	<!-- /model popup -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#myModal").modal('show');
+		});	
+		
+		
+// 		$("#cancel").click(function() {
+// 			window.location.reload(true);
+// 		});
+					
+	</script>
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -67,15 +67,5 @@ function logout()
 	var user = Parse.User.current();alert("hi");
 	Parse.User.logOut();
 	window.location.assign("index.html");
-	
-//	user.logOut({
-//		success: function(user){
-//			alert("logout");
-//			window.location.href="login.html";
-//		},
-//		error: function(error){
-//			alert("logout failed;");
-//		}
-//	});
 };
 
